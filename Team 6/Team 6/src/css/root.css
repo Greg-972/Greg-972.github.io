@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+
+:root {
+    --bleuturq:#009AA3;
+    --bluedark: #122940;
+    --bleucanard: #004F73;
+    --gris:#6F6F6E;
+    --vert:#7ab369;
+    --rouge:#ef1d1d;
+    --vertbleu:#008588;
+    --orange:#ff7400;
+    --grisvio:#8a7887;
+    --fuchsia:#cc1b79;
+ 
+    --black:#13161B;
+    --violetdark:#212135;
+    --white:#ffffff;
+ 
+    --orange2:#fc9901;
+    --orangeclaire:#ffc161;
+    --bleueau:#4daed9;
+    --moutarde:#b9ac00;
+    --brique:#d44b36;
+ 
+}
+ 
+body {
+    font-family: 'Montserrat', sans-serif;
+    /* background: url(./img/ratatouille.jpg) center/cover fixed;
+    /* padding: 2rem; 
+    min-height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto; */
+}

@@ -1,0 +1,568 @@
+
+body {
+  background: url(/assets/img/background.png) center/cover fixed;
+  margin: 0 auto;
+}
+
+/* ------------------------------------ */
+/* --------------HEADER---------------- */
+/* ------------------------------------ */
+header {
+  background: var(--white);
+}
+
+/* ---------Navbar du menu Burger------- */
+#side-bar {
+  position: fixed;
+  width: 280px;
+  height: 100%;
+  background-color: var(--violetdark);
+  top: 0;
+  left: -300px;
+  transition: 0.5s ease-in-out;
+  z-index: 11;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 30px;
+  left: 310px;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+}
+
+.toggle-button span {
+  width: 60px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: var(--orange2);
+  display: block;
+  margin-top: 4px;
+  transition: 0.5s ease;
+}
+
+.deux {
+  text-transform: uppercase;
+  color: var(--orange2);
+  list-style-type: none;
+  cursor: pointer;
+  padding: 10px;
+}
+.deux:hover {
+  background-color: var(--vertbleu);
+  color: var(--white);
+}
+
+#side-bar.active {
+  left: 0;
+}
+#side-bar.active .toggle-button {
+  left: 290px;
+}
+#side-bar.active span {
+  position: absolute;
+}
+#side-bar.active span:nth-child(1) {
+  transform: rotate(45deg);
+}
+#side-bar.active span:nth-child(2) {
+  opacity: 0;
+}
+#side-bar.active span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+#side-bar.active ~ main {
+  filter: brightness(50%);
+}
+
+/* ------Navigation-------- */
+
+/* -------Container-------- */
+.navbar1 {
+  margin-top: 50px;
+  display: flex;
+  gap: 160px;
+  height: 110px;
+  align-items: center;
+  font-size: 0.8rem;
+}
+/* ------Container UL------- */
+nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  text-transform: uppercase;
+}
+/* -------Liste--------------- */
+.un {
+  padding: 8px;
+}
+.un a {
+  text-decoration: none;
+  color: var(--black);
+}
+.un a:hover {
+  color: var(--vertbleu);
+}
+
+.un a .space {
+  margin-left: 20px;
+}
+
+.menu-btn {
+  position: absolute;
+  cursor: pointer;
+  top: 15px;
+  right: 30px;
+  z-index: 2;
+  display: none;
+  color: var(--bleuturq);
+}
+
+#compte {
+  margin-left: 0;
+  color: var(--vertbleu);
+}
+
+/* ----PORTRAIT DU PROFILE------ */
+.portrait {
+  margin-top: -11px;
+  background-color: var(--orange2);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* -----LOGO Campus du Lac------ */
+.logo img {
+  width: 150px;
+  margin-left: 10px;
+}
+#contact {
+  position: absolute;
+  right: 60px;
+  display: flex;
+  gap: 8px;
+  margin-top: -115px;
+}
+
+/* -----------BOUTONS CONTACT---------- */
+.candidature span {
+  margin-left: 130px;
+}
+.candidature {
+  width: 340px;
+}
+.contact1 span {
+  margin-left: 50px;
+}
+.contact1 {
+  width: 150px;
+}
+.candidature,
+.contact1 {
+  font-size: 1rem;
+  height: 40px;
+  border: none;
+  border-radius: 50px;
+  color: var(--white);
+  background-color: var(--vertbleu);
+}
+
+#contact button:hover {
+  background: var(--violetdark);
+  transition: 1s;
+}
+
+#portfolios {
+  padding-top: 50px;
+  height: 400px;
+  width: 100vw;
+  display: block;
+}
+.portfolios1 {
+  justify-content: center;
+  padding: 50px 0;
+}
+.portfolios1 h1 {
+  color: var(--white);
+  font-size: 3rem;
+  text-align: center;
+  position: relative;
+}
+.portfolios1 h1:after {
+  content: "";
+  position: absolute;
+  height: 14px;
+  width: 280px;
+  background: var(--orange2);
+  opacity: 0.5;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 4px;
+  z-index: -1;
+}
+
+/* ***************************search-bar avec un filtre******************************************** */
+.search-bar {
+  margin: 0 auto;
+  text-align: center;
+  width: 46%;
+  min-width: 220px;
+  max-width: 700px;
+}
+.input-container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.logosearch {
+  cursor: pointer;
+  background: var(--violetdark);
+  padding: 10px 20px;
+  border-radius: 150px 50px 50px 150px;
+  z-index: 10;
+}
+.logosearch img {
+  height: 26px;
+  width: 26px;
+  object-fit: cover;
+  transform: translateY(2px);
+}
+.input-container input {
+  border-radius: 0 150px 150px 0;
+  padding: 10px 10px 10px 20px;
+  border: none;
+  outline: none;
+  transform: translateX(-6px);
+  z-index: 4;
+  width: 100%;
+  font-size: 1.2rem;
+}
+.choix {
+  /* visibility: hidden; */
+  transform: perspective(200px);
+  transition: .5s;
+  background: var(--violetdark);
+  margin: 0 auto;
+  border-radius: 10px;
+  transform: translateY(-24px);
+  z-index: -10;
+  padding: 38px 10px 10px 10px;
+  font-family: "Montserrat", sans-serif;
+}
+.choix label {
+  color: var(--orange2);
+  font-weight: 600;
+  background: var(--black);
+  padding: 10px 10px 10px 36px;
+  display: inline-block;
+  margin: 5px 3px;
+  position: relative;
+  border-radius: 10px;
+}
+.choix label:before {
+  content: "";
+  height: 14px;
+  width: 14px;
+  background: var(--white);
+  position: absolute;
+  transform: translate(-26px, 2px);
+  border-radius: 3px;
+  transition: 0.1s;
+}
+.choix input[type="checkbox"] {
+  display: none;
+}
+.choix input[type="checkbox"]:checked + label:before {
+  background: var(--orange2);
+}
+
+.promotion {
+  color: var(--orange2);
+  font-weight: 600;
+  background: var(--black);
+  padding: 10px;
+  margin: 5px 3px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* *******************grid  card****************** */
+.grid {
+  width: 75%;
+  margin: 100px auto;
+  padding: 100px 0;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: repeat(5, 280px);
+  gap: 60px;
+}
+.grid a,
+.grid a:visited {
+  color: var(--white);
+  text-decoration: none;
+  display: inline-block;
+  height: 100%;
+}
+.card {
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  color: var(--white);
+  transition: 0.2s;
+}
+.card:nth-child(1) {
+  background: url(/assets/img/miniatures/min09.png) center/cover;
+}
+.card:nth-child(2) {
+  background: url(/assets/img/miniatures/min01.png) center/cover;
+}
+.card:nth-child(3) {
+  background: url(/assets/img/miniatures/min02.png) center/cover;
+}
+.card:nth-child(4) {
+  background: url(/assets/img/miniatures/min03.png) center/cover;
+}
+.card:nth-child(5) {
+  background: url(/assets/img/miniatures/min04.png) center/cover;
+}
+.card:nth-child(6) {
+  background: url(/assets/img/miniatures/min05.png) center/cover;
+}
+.card:nth-child(7) {
+  background: url(/assets/img/miniatures/min06.png) center/cover;
+}
+.card:nth-child(8) {
+  background: url(/assets/img/miniatures/min07.png) center/cover;
+}
+.card:nth-child(9) {
+  background: url(/assets/img/miniatures/min08.png) center/cover;
+}
+.card:nth-child(10) {
+  background: url(/assets/img/miniatures/min09.png) center/cover;
+}
+.card:hover h4 {
+  transform: translateY(-50px);
+}
+.card:hover .infos {
+  opacity: 1;
+  transform: translateY(-50px);
+}
+.date {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.date img {
+  height: 13px;
+  width: 13px;
+}
+.card h4 {
+  position: absolute;
+  bottom: 0;
+  font-size: 2rem;
+  padding: 10px;
+  z-index: 10;
+  transition: 0.2s ease;
+}
+.card h4:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 800%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  background: linear-gradient(360deg, black 20%, transparent 100%);
+}
+.infos {
+  position: absolute;
+  bottom: -70px;
+  transition: 0.4s ease;
+  background: black;
+  width: 100%;
+  height: 80px;
+  z-index: 20;
+  padding: 10px;
+}
+
+/* ***********************boutons pages suivantes***************************** */
+
+.pages-suivantes {
+  display: flex;
+  margin: 50px auto;
+  justify-content: center;
+}
+
+.pages-suivantes li {
+  margin: 7px;
+  text-align: center;
+  list-style-type: none;
+  background-color: var(--grisvio);
+  color: var(--white);
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+.pages-suivantes li:hover {
+  background-color: var(--bleucanard);
+  color: var(--orange);
+}
+#suivant {
+  height: 30px;
+  width: 100px;
+  border-radius: 20px;
+}
+/* -------------------------------- */
+/* --------------FOOTER------------------ */
+/* -------------------------------- */
+.arrow {
+  margin-left: 90%;
+  margin-top: -80px;
+}
+.arrow img {
+  align-items: center;
+ 
+  height: 30px;
+  width: 30px;
+}
+
+.footer {
+  
+  margin-top: auto;
+  align-self: flex-end;
+  padding: 63px 0;
+  position: relative;
+  z-index: 800;
+  background-color: var(--black);
+  color: var(--white);
+}
+
+h5 {
+  margin-bottom: 25px;
+}
+.footer__inner {
+  display: flex;
+  margin-top: 50px;
+  padding: 50px;
+  justify-content: space-around;
+}
+.footer__inner a {
+  text-decoration: none;
+}
+.logo-footer img {
+  margin-top: -70px;
+  height: 130px;
+}
+
+.espaceAvecLeLogo {
+  margin-top: 15px;
+}
+
+.block-footer-contact h6 {
+  font-size: 1.1rem;
+  margin-top: -30px;
+  margin-bottom: 70px;
+}
+
+#mail {
+  position: absolute;
+}
+.carte {
+  margin-top: 10px;
+  height: 30px;
+  width: 170px;
+  border-radius: 50px;
+  border: none;
+}
+
+.paiement {
+  justify-content: space-around;
+  margin-top: 30px;
+  position: relative;
+}
+.CB {
+  top: 16px;
+  left: 10px;
+  position: absolute;
+  min-height: 15px;
+  width: 20px;
+}
+.carte:hover {
+  color: var(--white);
+  background-color: var(--bleuturq);
+}
+
+/* ---------------------------------------- */
+/* -----------------MEDIA QUERIES-------------- */
+/* ---------------------------------------- */
+
+/* -----------------Bouton berger----------------------- */
+
+@media (min-width: 920px) {
+  .toggle-button span {
+    display: none;
+  }
+}
+
+@media (max-width: 920px) {
+  /* ---------HEADER---------- */
+  .menu-btn {
+    display: none;
+  }
+
+  .navbar1 {
+    display: none;
+  }
+
+  .disparait,
+  .space,
+  .portrait {
+    display: none;
+  }
+
+
+  /* --------MAIN--------- */
+  .grid {
+    grid-template-columns: 1fr;
+   
+  }
+
+  /* --------FOOTER--------- */
+  .footer {
+    width: 500px;
+}
+
+.footer__inner {
+  display: block;
+}
+
+.CB {
+  margin-left: 1px;
+  height: 15px;
+  width: 20px;
+}
+
+h5 {
+  margin-top: 30px;
+  margin-bottom: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+}

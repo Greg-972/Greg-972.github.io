@@ -1,0 +1,475 @@
+body {
+    background-image: url(../../../assets/img/background.png);
+  }
+
+/* ------------------------------------ */
+/* --------------HEADER---------------- */
+/* ------------------------------------ */
+header {
+    background: var(--white);
+  }
+  
+  /* ---------Navbar du menu Burger------- */
+  #side-bar {
+    position: fixed;
+    width: 280px;
+    height: 100%;
+    background-color: var(--violetdark);
+    top: 0;
+    left: -300px;
+    transition: 0.5s ease-in-out;
+    z-index: 11;
+  }
+  
+  .toggle-button {
+    position: absolute;
+    top: 30px;
+    left: 310px;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+  }
+  
+  .toggle-button span {
+    width: 60px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: var(--orange2);
+    display: block;
+    margin-top: 4px;
+    transition: 0.5s ease;
+  }
+  
+  .deux {
+    text-transform: uppercase;
+    color: var(--orange2);
+    list-style-type: none;
+    cursor: pointer;
+    padding: 10px;
+  }
+  .deux:hover {
+    background-color: var(--vertbleu);
+    color: var(--white);
+  }
+  
+  #side-bar.active {
+    left: 0;
+  }
+  #side-bar.active .toggle-button {
+    left: 290px;
+  }
+  #side-bar.active span {
+    position: absolute;
+  }
+  #side-bar.active span:nth-child(1) {
+    transform: rotate(45deg);
+  }
+  #side-bar.active span:nth-child(2) {
+    opacity: 0;
+  }
+  #side-bar.active span:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+  
+  #side-bar.active ~ main {
+    filter: brightness(50%);
+  }
+  
+  /* ------Navigation-------- */
+  
+  /* -------Container-------- */
+  .navbar1 {
+    margin-top: 50px;
+    display: flex;
+    gap: 160px;
+    height: 110px;
+    align-items: center;
+    font-size: 0.8rem;
+  }
+  /* ------Container UL------- */
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    text-transform: uppercase;
+  }
+  /* -------Liste--------------- */
+  .un {
+    padding: 8px;
+  }
+  .un a {
+    text-decoration: none;
+    color: var(--black);
+  }
+  .un a:hover {
+    color: var(--vertbleu);
+  }
+  
+  .un a .space {
+    margin-left: 20px;
+  }
+  
+  .menu-btn {
+    position: absolute;
+    cursor: pointer;
+    top: 15px;
+    right: 30px;
+    z-index: 2;
+    display: none;
+    color: var(--bleuturq);
+  }
+  
+  #compte {
+    margin-left: 0;
+    color: var(--vertbleu);
+  }
+  
+  /* ----PORTRAIT DU PROFILE------ */
+  .portrait {
+    margin-top: -11px;
+    background-color: var(--orange2);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  
+  /* -----LOGO Campus du Lac------ */
+  .logo img {
+    width: 150px;
+    margin-left: 10px;
+  }
+  #contact {
+    position: absolute;
+    right: 60px;
+    display: flex;
+    gap: 8px;
+    margin-top: -115px;
+  }
+  
+  /* -----------BOUTONS CONTACT---------- */
+  .candidature span {
+    margin-left: 130px;
+  }
+  .candidature {
+    width: 340px;
+  }
+  .contact1 span {
+    margin-left: 50px;
+  }
+  .contact1 {
+    width: 150px;
+  }
+  .candidature,
+  .contact1 {
+    font-size: 1rem;
+    height: 40px;
+    border: none;
+    border-radius: 50px;
+    color: var(--white);
+    background-color: var(--vertbleu);
+  }
+  
+  #contact button:hover {
+    background: var(--violetdark);
+    transition: 1s;
+  }
+
+  /* ------------------------------------ */
+/* --------------MAIN---------------- */
+/* ------------------------------------ */
+.inscription-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    padding-top: 50px;
+    color: var(--white);
+    margin-bottom: 250px;
+  }
+   
+  .inscription-container > * {
+    padding: 0.8em;
+  }
+   
+  .inscris-toi {
+    display: block;
+  }
+   
+  h2 {
+    font-size: 4em;
+    margin: 0;
+  }
+  .inscris-toi h2 {
+    color: white;
+    font-size: 3rem;
+    text-align: left;
+    position: relative;
+    display: inline-block;
+  }
+  .inscris-toi h2:after {
+    content: "";
+    position: absolute;
+    height: 14px;
+    width: 260px;
+    background: var(--orange2);
+    opacity: 0.8;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 4px;
+    z-index: -1;
+  }
+  h4 {
+    font-size: 2em;
+  }
+   
+  a.href-connexion {
+    display: block;
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--orange2);
+    text-decoration: underline;
+    font-size: 1.3em;
+    margin-top: 50px;
+    cursor: pointer;
+  }
+   
+  .form-container {
+    margin: 0;
+    padding: 3em;
+    background: var(--violetdark);
+    border-radius: 15px;
+    border: none;
+    width: 100%;
+    height: 100%;
+    max-width: 440px;
+  }
+   
+  .form-text {
+    display: flex;
+    gap: 7px;
+  }
+   
+  .promo {
+    width: 48%;
+  }
+   
+  input[type="email"],
+  input[type="password"],
+  input[type="text"] {
+    justify-content: center;
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    margin-top: 9px;
+    font-size: 1.3em;
+  }
+   
+  input[type="checkbox"] {
+    display: none;
+  }
+  input[type="checkbox"]:checked + label:before {
+    background: var(--orange2);
+  }
+   
+  label {
+    padding: 10;
+    color: var(--orange2);
+    font-size: 0.7em;
+    width: 90%;
+    margin: 16px 0 16px auto;
+    display: block;
+    position: relative;
+  }
+  label:before {
+    content: "";
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    border-radius: 6px;
+    background: white;
+    left: -20px;
+  }
+   
+  input[type="button"] {
+    background: var(--orange2);
+    color: var(--black);
+    font-size: 1.3em;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 207px;
+  }
+  input[type="button"]:hover {
+    background-color: var(--bleueau);
+  }
+
+
+/* -------------------------------- */
+/* --------------FOOTER------------------ */
+/* -------------------------------- */
+.footer {
+    width: 100%;
+    margin-top: auto;
+    align-self: flex-end;
+    padding: 63px 0;
+    position: relative;
+    z-index: 800;
+    background-color: var(--black);
+    color: var(--white);
+  }
+  
+  h5 {
+    margin-bottom: 25px;
+  }
+  .footer__inner {
+    display: flex;
+    margin-top: 50px;
+    padding: 50px;
+    justify-content: space-around;
+  }
+  .footer__inner a {
+    text-decoration: none;
+  }
+  .logo-footer img {
+    margin-top: -70px;
+    height: 130px;
+  }
+  
+  .espaceAvecLeLogo {
+    margin-top: 15px;
+  }
+  
+  .block-footer-contact h6 {
+    font-size: 1.1rem;
+    margin-top: -30px;
+    margin-bottom: 70px;
+  }
+  
+  #mail {
+    position: absolute;
+  }
+  .carte {
+    margin-top: 10px;
+    height: 30px;
+    width: 170px;
+    border-radius: 50px;
+    border: none;
+  }
+  
+  .paiement {
+    justify-content: space-around;
+    margin-top: 30px;
+    position: relative;
+  }
+  .CB {
+    top: 16px;
+    left: 10px;
+    position: absolute;
+    min-height: 15px;
+    width: 20px;
+  }
+  .carte:hover {
+    color: var(--white);
+    background-color: var(--bleuturq);
+  }
+
+  /* ---------------------------------------- */
+/* -----------------MEDIA QUERIES-------------- */
+/* ---------------------------------------- */
+
+/* -----------------Bouton berger----------------------- */
+
+@media (min-width: 920px) {
+    .toggle-button span {
+      display: none;
+    }
+  }
+
+
+  @media (max-width: 920px) {
+    /* ---------HEADER---------- */
+  .menu-btn {
+    display: none;
+  }
+
+  .navbar1 {
+    display: none;
+  }
+
+  .disparait,
+  .space,
+  .portrait {
+    display: none;
+  }
+
+      /* ------------main---------- */
+
+    /* ------------footer---------- */
+    .footer {
+        width: 100%;
+    }
+
+    .footer__inner {
+    display: block;
+    }
+
+    .CB {
+    margin-left: 1px;
+    height: 15px;
+    width: 20px;
+    }
+
+    h5 {
+    margin-top: 30px;
+    margin-bottom: 8px;
+    }
+}
+
+@media (max-width: 1137px) {
+    a.href-connexion {
+      color: var(--white);
+    }
+}
+   
+  @media (max-width: 520px) {
+    .inscris-toi h2,
+    h4 {
+      text-align: center;
+    }
+   
+    .inscris-toi h2 {
+      font-size: 4rem;
+    }
+    .inscris-toi h2:after {
+      width: 200%;
+      overflow: hidden;
+      height: 20px;
+    }
+    .inscris-toi h4 {
+      font-size: 1.12rem;
+    }
+    .form-container {
+      font-size: 0.9em;
+    }
+    
+}
+   
+  @media (max-width: 427px) {
+    .inscris-toi h2 {
+      font-size: 3rem;
+    }
+    .inscris-toi h4 {
+      font-size: 1rem;
+    }
+    .form-container {
+      padding: 2em;
+      margin: 20px 20px;
+      width: 90%;
+      height: 90%;
+      max-width: 360px;
+      font-size: 0.8em;
+    }
+}
